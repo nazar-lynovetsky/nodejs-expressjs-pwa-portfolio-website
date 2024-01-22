@@ -1,23 +1,23 @@
-import express  from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
+
+import express  from 'express'
+
 import config from './utils/config.js'
 import appRoutes from './routes/app.js'
 
 
 const app = express()
 
-const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
-const __dirname = path.dirname(__filename); // get the name of the directory
+const __filename = fileURLToPath( import.meta.url )
+const __dirname = path.dirname( __filename )
 
 /**
  * Sets up a view engine
  */
 
-console.log('__dirname', __dirname);
-
 app.set( 'view engine', 'ejs' )
-app.set( 'views', path.join(__dirname, 'views') )
+app.set( 'views', path.join( __dirname, 'views' ) )
 
 /**
  * Appends application/x-www-form-urlencoded data to request objects
@@ -29,7 +29,7 @@ app.use( express.urlencoded( { extended: false } ) )
  * Sets up a public directory
  */
 
-app.use( express.static( path.join(__dirname, 'public') ) )
+app.use( express.static( path.join( __dirname, 'public' ) ) )
 
 /**
  * Sets up a routes
