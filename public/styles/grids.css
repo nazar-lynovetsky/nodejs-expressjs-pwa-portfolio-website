@@ -1,0 +1,50 @@
+/* 🎨 Grid Intro
+=================================================================================== */
+
+/**
+* Container
+*/
+
+.grid-intro {
+  display: grid;
+  grid-template-columns: minmax(100%, 100%);
+  grid-template-areas:
+  'hgroup'
+  'figure'
+  'main';
+}
+
+@media (min-width: 825px) {
+
+  .grid-intro {
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+    'hgroup figure'
+    'main figure';
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .grid-intro {
+    grid-template-columns: 25% 75%;
+  }
+
+}
+
+/**
+* Item
+*/
+
+.grid-intro .grid-item:nth-child(1) {
+  grid-area: hgroup;
+}
+
+.grid-intro .grid-item:nth-child(2) {
+  grid-area: main;
+}
+
+.grid-intro .grid-item:nth-child(3) {
+  grid-area: figure;
+}
