@@ -1,0 +1,67 @@
+/* 🎨 Scrollbar
+=================================================================================== */
+
+/**
+* General
+*/
+
+@media (pointer: fine) {
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color--white-rock);
+  }
+
+  .dark-mode ::-webkit-scrollbar-track {
+    background: var(--color--tuatara);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color--salmon-dark);
+  }
+
+  .dark-mode ::-webkit-scrollbar-thumb {
+    background: var(--color--salmon);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color--salmon-dark);
+  }
+
+  .dark-mode ::-webkit-scrollbar-thumb:hover {
+    background: var(--color--salmon);
+  }
+  
+}
+
+
+
+/* 🎨 Body
+=================================================================================== */
+
+/**
+* General
+*/
+
+body {
+  padding: 14px;
+}
+
+@media (min-width: 600px) {
+
+  body {
+    padding: 24px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  body {
+    padding: 38px;
+  }
+
+}

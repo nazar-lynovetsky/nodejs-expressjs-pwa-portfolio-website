@@ -1,3 +1,19 @@
 body {
   font-family: var(--font-family);
 }
+
+/* 🎨 Typography
+=================================================================================== */
+
+/**
+* General
+*/
+
+body {
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color--tuatara);
+  background-color: var(--color--white-rock);
+}
