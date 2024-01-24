@@ -2,6 +2,22 @@
 =================================================================================== */
 
 /**
+* Item
+*/
+
+.grid-intro .grid-item:nth-child(1) {
+  grid-area: hgroup;
+}
+
+.grid-intro .grid-item:nth-child(2) {
+  grid-area: main;
+}
+
+.grid-intro .grid-item:nth-child(3) {
+  grid-area: figure;
+}
+
+/**
 * Container
 */
 
@@ -31,20 +47,4 @@
     grid-template-columns: 25% 75%;
   }
 
-}
-
-/**
-* Item
-*/
-
-.grid-intro .grid-item:nth-child(1) {
-  grid-area: hgroup;
-}
-
-.grid-intro .grid-item:nth-child(2) {
-  grid-area: main;
-}
-
-.grid-intro .grid-item:nth-child(3) {
-  grid-area: figure;
 }
