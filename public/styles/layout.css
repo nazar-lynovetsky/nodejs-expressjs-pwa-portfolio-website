@@ -122,8 +122,8 @@ html::after {
 * General
 */
 
-header::before,
-header::after {
+.banner::before,
+.banner::after {
   content: '';
   display: block;
   position: fixed;
@@ -134,11 +134,11 @@ header::after {
   background-color: #000;
 }
 
-header::before {
+.banner::before {
   top: 14px;
 }
 
-header::after {
+.banner::after {
   bottom: 14px;
 }
 
@@ -164,17 +164,17 @@ main::after {
 
 @media (min-width: 600px) {
 
-  header::before,
-  header::after {
+  .banner::before,
+  .banner::after {
     left: 28px;
     width: calc(100% - 56px);
   }
 
-  header::before {
+  .banner::before {
     top: 28px;
   }
   
-  header::after {
+  .banner::after {
     bottom: 28px;
   }
 
@@ -196,17 +196,17 @@ main::after {
 
 @media (min-width: 1250px) {
 
-  header::before,
-  header::after {
+  .banner::before,
+  .banner::after {
     left: 42px;
     width: calc(100% - 84px);
   }
 
-  header::before {
+  .banner::before {
     top: 42px;
   }
   
-  header::after {
+  .banner::after {
     bottom: 42px;
   }
 
@@ -228,17 +228,17 @@ main::after {
 
 @media (min-width: 1600px) {
 
-  header::before,
-  header::after {
+  .banner::before,
+  .banner::after {
     left: 56px;
     width: calc(100% - 112px);
   }
 
-  header::before {
+  .banner::before {
     top: 56px;
   }
   
-  header::after {
+  .banner::after {
     bottom: 56px;
   }
 
