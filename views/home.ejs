@@ -4,26 +4,28 @@
 </head>
 <body>
   <%- include('includes/layout/header.ejs') %>
-  <div class="grid-intro">
-    <hgroup class="grid-item">
-      <h1>Firstname Lastname</h1>
-      <p>Portfolio</p>
-    </hgroup>
-    <div class="grid-item">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis auteri.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+  <main>
+    <div class="grid-intro">
+      <hgroup class="grid-item">
+        <h1>Firstname Lastname</h1>
+        <p>Portfolio</p>
+      </hgroup>
+      <div class="grid-item">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis auteri.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+      </div>
+      <figure class="grid-item">
+        <picture>
+          <source media="(max-width:1249px)" srcset="/images/name-s.webp">
+          <source media="(max-width:1600px)" srcset="/images/name-m.webp">
+          <img src="/images/name.webp" alt="Firstname Lastname sits at a table in his home office">
+        </picture>
+        <figcaption>Firstname Lastname</figcaption>
+      </figure>
     </div>
-    <figure class="grid-item">
-      <picture>
-        <source media="(max-width:1249px)" srcset="/images/name-s.webp">
-        <source media="(max-width:1600px)" srcset="/images/name-m.webp">
-        <img src="/images/name.webp" alt="Firstname Lastname sits at a table in his home office">
-      </picture>
-      <figcaption>Firstname Lastname</figcaption>
-    </figure>
-  </div>
-  <section>
-    <h2>Works</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-  </section>
+    <section>
+      <h2>Works</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+    </section>
+  </main>
   <%- include('includes/document/end.ejs') %>
