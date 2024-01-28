@@ -6,7 +6,7 @@
 */
 
 body {
-  padding: 14px;
+  padding: 16px;
 }
 
 body::before,
@@ -17,7 +17,7 @@ body::after {
   top: 14px;
   width: 14px;
   height: calc(100% - 28px);
-  background-color: blue;
+  background-color: var(--color--white-rock);
 }
 
 body::before {
@@ -36,7 +36,7 @@ html::after {
   left: 14px;
   width: calc(100% - 28px);
   height: 14px;
-  background-color: red;
+  background-color: var(--color--white-rock);
 }
 
 html::before {
@@ -50,7 +50,7 @@ html::after {
 @media (min-width: 600px) {
 
   body {
-    padding: 28px;
+    padding: 30px;
   }
 
   body::before,
@@ -72,7 +72,7 @@ html::after {
 @media (min-width: 1250px) {
 
   body {
-    padding: 42px;
+    padding: 44px;
   }
 
   body::before,
@@ -94,7 +94,7 @@ html::after {
 @media (min-width: 1600px) {
 
   body {
-    padding: 56px;
+    padding: 58px;
   }
 
   body::before,
@@ -111,4 +111,149 @@ html::after {
     height: 56px;
   }
   
+}
+
+
+
+/* 🎨 Page border
+=================================================================================== */
+
+/**
+* General
+*/
+
+header::before,
+header::after {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: 10;
+  left: 14px;
+  width: calc(100% - 28px);
+  height: 2px;
+  background-color: #000;
+}
+
+header::before {
+  top: 14px;
+}
+
+header::after {
+  bottom: 14px;
+}
+
+main::before,
+main::after {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: 14px;
+  width: 2px;
+  height: calc(100% - 28px);
+  background-color: #000;
+}
+
+main::before {
+  right: 14px;
+}
+
+main::after {
+  left: 14px;
+}
+
+@media (min-width: 600px) {
+
+  header::before,
+  header::after {
+    left: 28px;
+    width: calc(100% - 56px);
+  }
+
+  header::before {
+    top: 28px;
+  }
+  
+  header::after {
+    bottom: 28px;
+  }
+
+  main::before,
+  main::after {
+    top: 28px;
+    height: calc(100% - 56px);
+  }
+
+  main::before {
+    right: 28px;
+  }
+  
+  main::after {
+    left: 28px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  header::before,
+  header::after {
+    left: 42px;
+    width: calc(100% - 84px);
+  }
+
+  header::before {
+    top: 42px;
+  }
+  
+  header::after {
+    bottom: 42px;
+  }
+
+  main::before,
+  main::after {
+    top: 42px;
+    height: calc(100% - 84px);
+  }
+
+  main::before {
+    right: 42px;
+  }
+  
+  main::after {
+    left: 42px;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  header::before,
+  header::after {
+    left: 56px;
+    width: calc(100% - 112px);
+  }
+
+  header::before {
+    top: 56px;
+  }
+  
+  header::after {
+    bottom: 56px;
+  }
+
+  main::before,
+  main::after {
+    top: 56px;
+    height: calc(100% - 112px);
+  }
+
+  main::before {
+    right: 56px;
+  }
+  
+  main::after {
+    left: 56px;
+  }
+
 }
