@@ -1,0 +1,36 @@
+/* 🎨 Button
+=================================================================================== */
+
+/**
+* General
+*/
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 38px;
+  padding-block: 0;
+  padding-inline: 18px;
+  border: 2px solid var(--color--tuatara);
+  border-radius: 24px;
+  background-color: var(--color--tuatara);
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color--white-rock);
+  cursor: pointer;
+}
+
+/**
+* On hover
+*/
+
+@media (pointer: fine) {
+
+  .button:hover {
+    background-color: var(--color--white-rock);
+    color: var(--color--tuatara);
+  }
+
+}

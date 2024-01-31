@@ -28,18 +28,18 @@ body::after {
   content: '';
   display: block;
   position: fixed;
-  top: 14px;
-  width: 14px;
-  height: calc(100% - 28px);
+  inset-block-start: 14px;
+  inline-size: 14px;
+  block-size: calc(100% - 28px);
   background-color: var(--color--white-rock);
 }
 
 body::before {
-  right: 0;
+  inset-inline-end: 0;
 }
 
 body::after {
-  left: 0;
+  inset-inline-start: 0;
 }
 
 html::before,
@@ -47,18 +47,18 @@ html::after {
   content: '';
   display: block;
   position: fixed;
-  left: 14px;
-  width: calc(100% - 28px);
-  height: 14px;
+  inset-inline-start: 14px;
+  inline-size: calc(100% - 28px);
+  block-size: 14px;
   background-color: var(--color--white-rock);
 }
 
 html::before {
-  top: 0;
+  inset-block-start: 0;
 }
 
 html::after {
-  bottom: 0;
+  inset-block-end: 0;
 }
 
 @media (min-width: 600px) {
@@ -69,16 +69,16 @@ html::after {
 
   body::before,
   body::after {
-    top: 28px;
-    width: 28px;
-    height: calc(100% - 56px);
+    inset-block-start: 28px;
+    inline-size: 28px;
+    block-size: calc(100% - 56px);
   }
 
   html::before,
   html::after {
-    left: 28px;
-    width: calc(100% - 56px);
-    height: 28px;
+    inset-inline-start: 28px;
+    inline-size: calc(100% - 56px);
+    block-size: 28px;
   }
 
 }
@@ -91,16 +91,16 @@ html::after {
 
   body::before,
   body::after {
-    top: 42px;
-    width: 42px;
-    height: calc(100% - 84px);
+    inset-block-start: 42px;
+    inline-size: 42px;
+    block-size: calc(100% - 84px);
   }
 
   html::before,
   html::after {
-    left: 42px;
-    width: calc(100% - 84px);
-    height: 42px;
+    inset-inline-start: 42px;
+    inline-size: calc(100% - 84px);
+    block-size: 42px;
   }
   
 }
@@ -113,16 +113,16 @@ html::after {
 
   body::before,
   body::after {
-    top: 56px;
-    width: 56px;
-    height: calc(100% - 112px);
+    inset-block-start: 56px;
+    inline-size: 56px;
+    block-size: calc(100% - 112px);
   }
 
   html::before,
   html::after {
-    left: 56px;
-    width: calc(100% - 112px);
-    height: 56px;
+    inset-inline-start: 56px;
+    inline-size: calc(100% - 112px);
+    block-size: 56px;
   }
   
 }
@@ -154,19 +154,19 @@ html::after {
   content: '';
   display: block;
   position: fixed;
-  left: 14px;
-  width: calc(100% - 28px);
-  height: 2px;
+  inset-inline-start: 14px;
+  inline-size: calc(100% - 28px);
+  block-size: 2px;
   background-color: #000;
   animation: border-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
 .banner::before {
-  top: 14px;
+  inset-block-start: 14px;
 }
 
 .banner::after {
-  bottom: 14px;
+  inset-block-end: 14px;
 }
 
 main::before,
@@ -174,49 +174,49 @@ main::after {
   content: '';
   display: block;
   position: fixed;
-  top: 14px;
-  width: 2px;
-  height: calc(100% - 28px);
+  inset-block-start: 14px;
+  inline-size: 2px;
+  block-size: calc(100% - 28px);
   background-color: #000;
   animation: border-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
 main::before {
-  right: 14px;
+  inset-inline-end: 14px;
 }
 
 main::after {
-  left: 14px;
+  inset-inline-start: 14px;
 }
 
 @media (min-width: 600px) {
 
   .banner::before,
   .banner::after {
-    left: 28px;
-    width: calc(100% - 56px);
+    inset-inline-start: 28px;
+    inline-size: calc(100% - 56px);
   }
 
   .banner::before {
-    top: 28px;
+    inset-block-start: 28px;
   }
   
   .banner::after {
-    bottom: 28px;
+    inset-block-end: 28px;
   }
 
   main::before,
   main::after {
-    top: 28px;
-    height: calc(100% - 56px);
+    inset-block-start: 28px;
+    block-size: calc(100% - 56px);
   }
 
   main::before {
-    right: 28px;
+    inset-inline-end: 28px;
   }
   
   main::after {
-    left: 28px;
+    inset-inline-start: 28px;
   }
 
 }
@@ -225,30 +225,30 @@ main::after {
 
   .banner::before,
   .banner::after {
-    left: 42px;
-    width: calc(100% - 84px);
+    inset-inline-start: 42px;
+    inline-size: calc(100% - 84px);
   }
 
   .banner::before {
-    top: 42px;
+    inset-block-start: 42px;
   }
   
   .banner::after {
-    bottom: 42px;
+    inset-block-end: 42px;
   }
 
   main::before,
   main::after {
-    top: 42px;
-    height: calc(100% - 84px);
+    inset-block-start: 42px;
+    block-size: calc(100% - 84px);
   }
 
   main::before {
-    right: 42px;
+    inset-inline-end: 42px;
   }
   
   main::after {
-    left: 42px;
+    inset-inline-start: 42px;
   }
 
 }
@@ -257,30 +257,30 @@ main::after {
 
   .banner::before,
   .banner::after {
-    left: 56px;
-    width: calc(100% - 112px);
+    inset-inline-start: 56px;
+    inline-size: calc(100% - 112px);
   }
 
   .banner::before {
-    top: 56px;
+    inset-block-start: 56px;
   }
   
   .banner::after {
-    bottom: 56px;
+    inset-block-end: 56px;
   }
 
   main::before,
   main::after {
-    top: 56px;
-    height: calc(100% - 112px);
+    inset-block-start: 56px;
+    block-size: calc(100% - 112px);
   }
 
   main::before {
-    right: 56px;
+    inset-inline-end: 56px;
   }
   
   main::after {
-    left: 56px;
+    inset-inline-start: 56px;
   }
 
 }
