@@ -347,29 +347,3 @@ template {
 [hidden] {
   display: none;
 }
-
-
-
-/* 🎨 Custom Normilize
-=================================================================================== */
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-*:focus,
-*:focus-visible {
-  outline: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-p, h1, h2, h3, h4, h5, h6, figure {
-  margin: 0;
-}

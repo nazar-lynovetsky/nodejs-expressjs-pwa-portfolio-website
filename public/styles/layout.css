@@ -1,3 +1,17 @@
+/* 🎨 Body
+=================================================================================== */
+
+/**
+* General
+*/
+
+body {
+  color: var(--color--tuatara);
+  background-color: var(--color--white-rock);
+}
+
+
+
 /* 🎨 Page frame
 =================================================================================== */
 
@@ -127,7 +141,6 @@ html::after {
   content: '';
   display: block;
   position: fixed;
-  z-index: 10;
   left: 14px;
   width: calc(100% - 28px);
   height: 2px;
@@ -147,7 +160,6 @@ main::after {
   content: '';
   display: block;
   position: fixed;
-  z-index: 10;
   top: 14px;
   width: 2px;
   height: calc(100% - 28px);

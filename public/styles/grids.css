@@ -23,7 +23,7 @@
 
 .grid-introduction {
   display: grid;
-  grid-template-columns: minmax(100%, 100%);
+  grid-template-columns: 100%;
   grid-template-areas:
   'hgroup'
   'figure'
