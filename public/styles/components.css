@@ -34,3 +34,37 @@
   }
 
 }
+
+
+
+/* 🎨 Nav
+=================================================================================== */
+
+/**
+* List
+*/
+
+@media (max-width: 599px) {
+
+  /* .nav-list {
+    visibility: visible;
+  } */
+  
+  .nav-toggler[aria-expanded="false"] + .nav-list {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
+
+/**
+* Button
+*/
+
+@media (min-width: 600px) {
+
+  .nav-toggler {
+    display: none;
+  }
+
+}
