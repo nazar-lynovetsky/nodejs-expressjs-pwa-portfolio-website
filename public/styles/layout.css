@@ -20,7 +20,7 @@ body {
 */
 
 body {
-  padding: 16px;
+  padding: 14px;
 }
 
 body::before,
@@ -28,9 +28,9 @@ body::after {
   content: '';
   display: block;
   position: fixed;
-  inset-block-start: 14px;
-  inline-size: 14px;
-  block-size: calc(100% - 28px);
+  inset-block-start: 12px;
+  inline-size: 12px;
+  block-size: calc(100% - 24px);
   background-color: var(--color--white-rock);
 }
 
@@ -47,9 +47,9 @@ html::after {
   content: '';
   display: block;
   position: fixed;
-  inset-inline-start: 14px;
-  inline-size: calc(100% - 28px);
-  block-size: 14px;
+  inset-inline-start: 12px;
+  inline-size: calc(100% - 24px);
+  block-size: 12px;
   background-color: var(--color--white-rock);
 }
 
@@ -64,21 +64,21 @@ html::after {
 @media (min-width: 600px) {
 
   body {
-    padding: 30px;
+    padding: 26px;
   }
 
   body::before,
   body::after {
-    inset-block-start: 28px;
-    inline-size: 28px;
-    block-size: calc(100% - 56px);
+    inset-block-start: 24px;
+    inline-size: 24px;
+    block-size: calc(100% - 48px);
   }
 
   html::before,
   html::after {
-    inset-inline-start: 28px;
-    inline-size: calc(100% - 56px);
-    block-size: 28px;
+    inset-inline-start: 24px;
+    inline-size: calc(100% - 48px);
+    block-size: 24px;
   }
 
 }
@@ -86,43 +86,21 @@ html::after {
 @media (min-width: 1250px) {
 
   body {
-    padding: 44px;
+    padding: 38px;
   }
 
   body::before,
   body::after {
-    inset-block-start: 42px;
-    inline-size: 42px;
-    block-size: calc(100% - 84px);
+    inset-block-start: 36px;
+    inline-size: 36px;
+    block-size: calc(100% - 72px);
   }
 
   html::before,
   html::after {
-    inset-inline-start: 42px;
-    inline-size: calc(100% - 84px);
-    block-size: 42px;
-  }
-  
-}
-
-@media (min-width: 1600px) {
-
-  body {
-    padding: 58px;
-  }
-
-  body::before,
-  body::after {
-    inset-block-start: 56px;
-    inline-size: 56px;
-    block-size: calc(100% - 112px);
-  }
-
-  html::before,
-  html::after {
-    inset-inline-start: 56px;
-    inline-size: calc(100% - 112px);
-    block-size: 56px;
+    inset-inline-start: 36px;
+    inline-size: calc(100% - 72px);
+    block-size: 36px;
   }
   
 }
@@ -154,19 +132,19 @@ html::after {
   content: '';
   display: block;
   position: fixed;
-  inset-inline-start: 14px;
-  inline-size: calc(100% - 28px);
+  inset-inline-start: 12px;
+  inline-size: calc(100% - 24px);
   block-size: 2px;
   background-color: #000;
   animation: border-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
 .banner::before {
-  inset-block-start: 14px;
+  inset-block-start: 12px;
 }
 
 .banner::after {
-  inset-block-end: 14px;
+  inset-block-end: 12px;
 }
 
 main::before,
@@ -174,49 +152,49 @@ main::after {
   content: '';
   display: block;
   position: fixed;
-  inset-block-start: 14px;
+  inset-block-start: 12px;
   inline-size: 2px;
-  block-size: calc(100% - 28px);
+  block-size: calc(100% - 24px);
   background-color: #000;
   animation: border-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
 main::before {
-  inset-inline-end: 14px;
+  inset-inline-end: 12px;
 }
 
 main::after {
-  inset-inline-start: 14px;
+  inset-inline-start: 12px;
 }
 
 @media (min-width: 600px) {
 
   .banner::before,
   .banner::after {
-    inset-inline-start: 28px;
-    inline-size: calc(100% - 56px);
+    inset-inline-start: 24px;
+    inline-size: calc(100% - 48px);
   }
 
   .banner::before {
-    inset-block-start: 28px;
+    inset-block-start: 24px;
   }
   
   .banner::after {
-    inset-block-end: 28px;
+    inset-block-end: 24px;
   }
 
   main::before,
   main::after {
-    inset-block-start: 28px;
-    block-size: calc(100% - 56px);
+    inset-block-start: 24px;
+    block-size: calc(100% - 48px);
   }
 
   main::before {
-    inset-inline-end: 28px;
+    inset-inline-end: 24px;
   }
   
   main::after {
-    inset-inline-start: 28px;
+    inset-inline-start: 24px;
   }
 
 }
@@ -225,62 +203,30 @@ main::after {
 
   .banner::before,
   .banner::after {
-    inset-inline-start: 42px;
-    inline-size: calc(100% - 84px);
+    inset-inline-start: 36px;
+    inline-size: calc(100% - 72px);
   }
 
   .banner::before {
-    inset-block-start: 42px;
+    inset-block-start: 36px;
   }
   
   .banner::after {
-    inset-block-end: 42px;
+    inset-block-end: 36px;
   }
 
   main::before,
   main::after {
-    inset-block-start: 42px;
-    block-size: calc(100% - 84px);
+    inset-block-start: 36px;
+    block-size: calc(100% - 72px);
   }
 
   main::before {
-    inset-inline-end: 42px;
+    inset-inline-end: 36px;
   }
   
   main::after {
-    inset-inline-start: 42px;
-  }
-
-}
-
-@media (min-width: 1600px) {
-
-  .banner::before,
-  .banner::after {
-    inset-inline-start: 56px;
-    inline-size: calc(100% - 112px);
-  }
-
-  .banner::before {
-    inset-block-start: 56px;
-  }
-  
-  .banner::after {
-    inset-block-end: 56px;
-  }
-
-  main::before,
-  main::after {
-    inset-block-start: 56px;
-    block-size: calc(100% - 112px);
-  }
-
-  main::before {
-    inset-inline-end: 56px;
-  }
-  
-  main::after {
-    inset-inline-start: 56px;
+    inset-inline-start: 36px;
   }
 
 }
