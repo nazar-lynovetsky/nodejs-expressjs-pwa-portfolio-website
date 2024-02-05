@@ -10,17 +10,18 @@
   justify-content: center;
   align-items: center;
   block-size: 38px;
-  padding-block: 0;
   padding-inline: 18px;
   border: 2px solid var(--color--tuatara);
   border-radius: 24px;
-  box-shadow: none;
   background-color: var(--color--tuatara);
   line-height: 1.1;
   text-align: center;
   text-decoration: none;
   color: var(--color--white-rock);
-  cursor: pointer;
+}
+
+.button svg {
+  fill: var(--color--white-rock);
 }
 
 /**
@@ -34,6 +35,10 @@
     color: var(--color--tuatara);
   }
 
+  .button:hover svg {
+    fill: var(--color--tuatara);
+  }
+
 }
 
 
@@ -45,13 +50,26 @@
 * List
 */
 
-@media (max-width: 599px) {
+#nav ul {
+  position: fixed;
+  inset-block-end: 70px;
+  inset-inline-start: calc(50% - 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  inline-size: 200px;
+  padding: 2px;
+  border-radius: 22px;
+  background-color: var(--color--tuatara);
+}
 
-  .nav-list {
-    visibility: visible;
-  }
+#nav ul .button {
+  inline-size: 100%;
+}
+
+@media (max-width: 599px) {
   
-  .nav-toggler[aria-expanded="false"] + .nav-list {
+  #nav button[aria-expanded="false"] + ul {
     opacity: 0;
     visibility: hidden;
   }
@@ -59,31 +77,18 @@
 }
 
 /**
-* Button
+* Toggler
 */
 
-.nav-toggler {
+#nav button {
   position: fixed;
   inset-block-end: 26px;
-  inset-inline-start: calc(50% - 19px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  inline-size: 38px;
-  block-size: 38px;
-  padding: 0;
-  border: 2px solid var(--color--tuatara);
-  border-radius: 50%;
-  background-color: var(--color--tuatara);
-}
-
-.nav-toggler svg {
-  fill: var(--color--white-rock);
+  inset-inline-start: calc(50% - 34px);
 }
 
 @media (min-width: 600px) {
 
-  .nav-toggler {
+  #nav button {
     display: none;
   }
 

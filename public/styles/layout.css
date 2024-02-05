@@ -1,5 +1,33 @@
+/* 🎨 Resets
+=================================================================================== */
+
+/**
+* Sets the box sizing for all elements
+*/
+
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+/**
+* Sets some default button styles
+*/
+
+button {
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+/**
+* Sets some default list styles
+*/
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 
@@ -32,9 +60,9 @@ body {
 body::before,
 body::after {
   content: '';
-  display: block;
   position: fixed;
   inset-block-start: 12px;
+  display: block;
   inline-size: 12px;
   block-size: calc(100% - 24px);
   background-color: var(--color--white-rock);
@@ -51,9 +79,9 @@ body::after {
 html::before,
 html::after {
   content: '';
-  display: block;
   position: fixed;
   inset-inline-start: 12px;
+  display: block;
   inline-size: calc(100% - 24px);
   block-size: 12px;
   background-color: var(--color--white-rock);
@@ -233,6 +261,59 @@ main::after {
   
   main::after {
     inset-inline-start: 36px;
+  }
+
+}
+
+
+
+/* 🎨 Grid Introduction
+=================================================================================== */
+
+/**
+* Items
+*/
+
+.grid-introduction hgroup {
+  grid-area: hgroup;
+}
+
+.grid-introduction div {
+  grid-area: main;
+}
+
+.grid-introduction figure {
+  grid-area: figure;
+}
+
+/**
+* Container
+*/
+
+.grid-introduction {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  'hgroup'
+  'figure'
+  'main';
+}
+
+@media (min-width: 825px) {
+
+  .grid-introduction {
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+    'hgroup figure'
+    'main figure';
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .grid-introduction {
+    grid-template-columns: 25% 75%;
   }
 
 }
