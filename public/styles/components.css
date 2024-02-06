@@ -96,6 +96,24 @@
 
 }
 
+@media (min-width: 600px) {
+
+  #nav ul {
+    inset-block-start: 4px;
+    inset-inline-start: 50px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  #nav ul {
+    inset-block-start: 16px;
+    inset-inline-start: 73px;
+  }
+
+}
+
 /**
 * Links
 */

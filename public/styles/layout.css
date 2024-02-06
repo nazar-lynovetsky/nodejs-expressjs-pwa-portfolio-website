@@ -42,6 +42,14 @@ img {
   max-inline-size: 100%;
 }
 
+/**
+* Resets figure styles
+*/
+
+figure {
+  margin: 0;
+}
+
 
 
 /* 🎨 Body
