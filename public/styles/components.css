@@ -78,9 +78,9 @@
     inset-inline-start: calc(50% - 100px);
     flex-direction: column;
     inline-size: 200px;
+    will-change: transform, opacity, visibility;
     visibility: visible;
     opacity: 1;
-    will-change: transform, opacity, visibility;
     transform: translateY(0);
     transition:
       transform 0.6s cubic-bezier(.68,-0.55,.27,1.55),
@@ -89,8 +89,8 @@
   }
   
   #nav button[aria-expanded="false"] + ul {
-    opacity: 0;
     visibility: hidden;
+    opacity: 0;
     transform: translateY(12px);
   }
 

@@ -50,6 +50,35 @@ figure {
   margin: 0;
 }
 
+/**
+* Resets text margin
+*/
+
+body :is(p, h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+}
+
+
+
+/* 🎨 Helpers
+=================================================================================== */
+
+/**
+* Text
+*/
+
+.mbs-p {
+  margin-block-start: 10px;
+}
+
+@media (min-width: 1250px) {
+
+  .mbs-p {
+    margin-block-start: 12px;
+  }
+
+}
+
 
 
 /* 🎨 Body
@@ -184,9 +213,9 @@ html::after {
 .banner::before,
 .banner::after {
   content: '';
-  display: block;
   position: fixed;
   inset-inline-start: 12px;
+  display: block;
   inline-size: calc(100% - 24px);
   block-size: 2px;
   background-color: #000;
@@ -204,9 +233,9 @@ html::after {
 main::before,
 main::after {
   content: '';
-  display: block;
   position: fixed;
   inset-block-start: 12px;
+  display: block;
   inline-size: 2px;
   block-size: calc(100% - 24px);
   background-color: #000;
