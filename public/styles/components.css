@@ -26,6 +26,7 @@
 
 /**
 * On hover
+* We set styles for the hover event only for devices that support this.
 */
 
 @media (pointer: fine) {
@@ -39,6 +40,17 @@
     fill: var(--color--tuatara);
   }
 
+}
+
+/**
+* On active/focus
+*/
+
+.button:active,
+.button:focus-visible {
+  background-color: var(--color--sail);
+  color: var(--color--tuatara);
+  outline: none;
 }
 
 
