@@ -52,29 +52,46 @@
 
 #nav ul {
   position: fixed;
-  inset-block-end: 76px;
-  inset-inline-start: calc(50% - 100px);
   display: flex;
-  flex-direction: column;
   gap: 3px;
-  inline-size: 200px;
   padding: 2px;
-  border-radius: 22px;
+  border-radius: 21px;
   background-color: var(--color--tuatara);
-  transform: translateY(0);
-  transition: all .6s cubic-bezier(.68,-0.55,.27,1.55);
-}
-
-#nav ul .button {
-  inline-size: 100%;
 }
 
 @media (max-width: 599px) {
+
+  #nav ul {
+    inset-block-end: 76px;
+    inset-inline-start: calc(50% - 100px);
+    flex-direction: column;
+    inline-size: 200px;
+    visibility: visible;
+    opacity: 1;
+    will-change: transform, opacity, visibility;
+    transform: translateY(0);
+    transition:
+      transform 0.6s cubic-bezier(.68,-0.55,.27,1.55),
+      opacity 0.6s linear,
+      visibility 0.3s linear;
+  }
   
   #nav button[aria-expanded="false"] + ul {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(300px);
+    transform: translateY(12px);
+  }
+
+}
+
+/**
+* Links
+*/
+
+@media (max-width: 599px) {
+
+  #nav ul .button {
+    inline-size: 100%;
   }
 
 }
