@@ -67,16 +67,68 @@ body :is(p, h1, h2, h3, h4, h5, h6) {
 * Text
 */
 
-.mbs-p {
+body .mbs-p {
   margin-block-start: 10px;
 }
 
 @media (min-width: 1250px) {
 
-  .mbs-p {
+  body .mbs-p {
     margin-block-start: 12px;
   }
 
+}
+
+/**
+* Pseudo-elements display
+*/
+
+body .dbb::before {
+  display: block;
+}
+
+body .dba::after {
+  display: block;
+}
+
+@media (min-width: 825px) {
+
+  body .dbb-ft::before {
+    display: block;
+  }
+
+  body .dba-ft::after {
+    display: block;
+  }
+
+}
+
+/**
+* Pseudo-elements position
+*/
+
+body .ib-bs::before,
+body .ia-bs::after {
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+body .ib-ie::before,
+body .ia-ie::after {
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+body .ib-be::before,
+body .ia-be::after {
+  inset-inline-start: 0;
+  inset-block-end: 0;
+}
+
+body .ib-is::before,
+body .ia-is::after {
+  inset-inline-start: 0;
+  inset-block-start: 0;
 }
 
 
@@ -197,7 +249,7 @@ html::after {
 * Animation
 */
 
-@keyframes border-in {
+@keyframes scale-in {
   0% {
     transform: scale(0);
   }
@@ -219,7 +271,7 @@ html::after {
   inline-size: calc(100% - 24px);
   block-size: 2px;
   background-color: #000;
-  animation: border-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
+  animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
 .banner::before {
@@ -239,7 +291,7 @@ main::after {
   inline-size: 2px;
   block-size: calc(100% - 24px);
   background-color: #000;
-  animation: border-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
+  animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
 main::before {
@@ -312,6 +364,39 @@ main::after {
     inset-inline-start: 36px;
   }
 
+}
+
+
+
+/* 🎨 Growing border
+=================================================================================== */
+
+/**
+* Genral
+*/
+
+.gb-v,
+.gb-h {
+  position: relative;
+}
+
+.gb-v::before,
+.gb-h::after {
+  content: '';
+  position: absolute;
+  display: none;
+  background-color: var(--color--tuatara);
+  animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
+}
+
+.gb-v::before {
+  inline-size: 2px;
+  block-size: 100%;
+}
+
+.gb-h::after {
+  inline-size: 100%;
+  block-size: 2px;
 }
 
 
