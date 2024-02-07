@@ -64,7 +64,7 @@ body :is(p, h1, h2, h3, h4, h5, h6) {
 =================================================================================== */
 
 /**
-* Text
+* Text margin
 */
 
 body .mbs-p {
@@ -77,6 +77,30 @@ body .mbs-p {
     margin-block-start: 12px;
   }
 
+}
+
+/**
+* Text font size
+*/
+
+.fs-b {
+  font-size: 1.2rem;
+}
+
+.fs-s {
+  font-size: .8rem;
+}
+
+/**
+* Text weight
+*/
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
 }
 
 /**
