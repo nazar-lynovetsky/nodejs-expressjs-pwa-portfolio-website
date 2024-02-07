@@ -69,7 +69,7 @@ body h6, body .h6 {
   line-height: 1.5;
 }
 
-@media (min-width: 825px) {
+@media (min-width: 820px) {
   
   body h1, body .h1 {
     font-size: 3.1rem;

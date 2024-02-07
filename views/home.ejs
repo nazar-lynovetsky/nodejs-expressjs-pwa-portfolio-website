@@ -7,20 +7,36 @@
   <main>
     <div class="grid-introduction gb-h ia-be dba">
       <hgroup class="box">
-        <h1 class="fs-b fw-500">Firstname Lastname</h1>
-        <p class="h6">Portfolio</p>
+        <h1 class="fs-b fw-500">Lorem ipsum</h1>
+        <p class="h6">Consectetur</p>
       </hgroup>
-      <div class="box">
+      <div class="box d-f fd-c jc-fe">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis auteri.</p>
         <p class="mbs-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
       </div>
       <figure class="box gb-v ib-is dbb-ft">
-        <picture>
-          <source media="(max-width:1249px)" srcset="/images/name-s.webp">
-          <source media="(max-width:1600px)" srcset="/images/name-m.webp">
-          <img src="/images/name.webp" alt="Firstname Lastname sits at a table in his home office">
-        </picture>
-        <figcaption>Firstname Lastname</figcaption>
+        <img
+          src="/images/desktop-3x.png"
+          srcset="
+            /images/mobile-1x.png 360w,
+            /images/mobile-2x.png 720w,
+            /images/mobile-3x.png 1080w,
+            /images/tablet-1x.png 495w,
+            /images/tablet-2x.png 990w,
+            /images/tablet-3x.png 1485w,
+            /images/laptop-1x.png 835w,
+            /images/laptop-2x.png 1670w,
+            /images/laptop-3x.png 2505w,
+            /images/desktop-1x.png 1024w,
+            /images/desktop-2x.png 2048w,
+            /images/desktop-3x.png 3072w"
+          sizes="
+            (max-width: 819px) 360px,
+            (min-width: 820px) and (max-width: 1023px) 495px,
+            (min-width: 1024px) and (max-width: 1599px) 835px,
+            (min-width: 1600px) 1024px"
+        >
+        <figcaption>Lorem ipsum</figcaption>
       </figure>
     </div>
     <section class="box">

@@ -104,6 +104,38 @@ body .mbs-p {
 }
 
 /**
+* Display
+*/
+
+.d-f {
+  display: flex;
+}
+
+/**
+* Aligned
+*/
+
+.ai-c {
+  align-items: center
+}
+
+.ai-fe {
+  align-items: flex-end
+}
+
+.jc-c {
+  justify-content: center
+}
+
+.jc-fe {
+  justify-content: flex-end
+}
+
+.fd-c {
+  flex-direction: column
+}
+
+/**
 * Pseudo-elements display
 */
 
@@ -115,7 +147,7 @@ body .dba::after {
   display: block;
 }
 
-@media (min-width: 825px) {
+@media (min-width: 820px) {
 
   body .dbb-ft::before {
     display: block;
@@ -168,6 +200,15 @@ body {
   color: var(--color--tuatara);
   background-color: var(--color--white-rock);
 }
+
+
+
+/* 🎨 Scrollbar
+=================================================================================== */
+
+/**
+* General
+*/
 
 
 
@@ -461,7 +502,7 @@ main::after {
   'main';
 }
 
-@media (min-width: 825px) {
+@media (min-width: 820px) {
 
   .grid-introduction {
     grid-template-columns: 35% 65%;
