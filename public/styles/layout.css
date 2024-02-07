@@ -162,6 +162,7 @@ body::before,
 body::after {
   content: '';
   position: fixed;
+  z-index: 10;
   inset-block-start: 12px;
   display: block;
   inline-size: 12px;
@@ -181,6 +182,7 @@ html::before,
 html::after {
   content: '';
   position: fixed;
+  z-index: 10;
   inset-inline-start: 12px;
   display: block;
   inline-size: calc(100% - 24px);
@@ -266,6 +268,7 @@ html::after {
 .banner::after {
   content: '';
   position: fixed;
+  z-index: 10;
   inset-inline-start: 12px;
   display: block;
   inline-size: calc(100% - 24px);
@@ -286,6 +289,7 @@ main::before,
 main::after {
   content: '';
   position: fixed;
+  z-index: 10;
   inset-block-start: 12px;
   display: block;
   inline-size: 2px;
