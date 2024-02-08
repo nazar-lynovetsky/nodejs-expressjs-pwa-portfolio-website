@@ -145,3 +145,18 @@
   }
 
 }
+
+
+
+/* 🎨 Scene
+=================================================================================== */
+
+#scene {
+  position: relative;
+}
+
+#scene figcaption {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+}

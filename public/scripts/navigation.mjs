@@ -1,15 +1,23 @@
-var navEl = document.querySelector( '#nav' )
-var buttonEl = nav.querySelector( 'button' )
+var nav = document.querySelector( '#nav' )
+var button = nav.querySelector( 'button' )
 
-buttonEl.addEventListener( 'click', e => {
-  setAriaExpanded( buttonEl, !getAriaExpanded( buttonEl ) )
+/**
+ * Event Listeners
+ */
+
+button.addEventListener( 'click', e => {
+  setAriaExpanded( button, !getAriaExpanded( button ) )
 } )
 
-navEl.addEventListener( 'keyup', e => {
+nav.addEventListener( 'keyup', e => {
   if ( e.code === 'Escape' ) {
-    setAriaExpanded( buttonEl, false )
+    setAriaExpanded( button, false )
   }
 } )
+
+/**
+ * Methods
+ */
 
 function getAriaExpanded( el ) {
   return el.getAttribute( 'aria-expanded' ) === 'true'
