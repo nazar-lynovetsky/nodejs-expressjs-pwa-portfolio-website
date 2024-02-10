@@ -5,13 +5,13 @@ document.addEventListener( "DOMContentLoaded", () => {
    */
 
   var scene = document.querySelector( '#scene' )
-  var figcaption = scene.querySelector( 'figcaption' )
+  var sceneName = scene.querySelector( '#scene-name' )
 
   /**
    * STEP 1: Replaces the plain text content in the figcaption with a hierarchical structure of DOM elements.
    */
 
-  replaceTextWithHTML( figcaption )
+  replaceTextWithHTML( sceneName )
 
   /**
    * STEP 2: YO! YO! YO!
@@ -31,7 +31,7 @@ function replaceTextWithHTML( container ) {
 function stringToArray( string ) {
   var letters = []
   for ( var i = 0; i < string.length; i++ ) {
-    letters.push( string[ i ] === ' ' ? '\n' : string[ i ] )
+    letters.push( string[ i ] === ' ' ? 'br' : string[ i ] )
   }
   return letters
 }
@@ -39,9 +39,16 @@ function stringToArray( string ) {
 
 function wrapLettersInHTML( letters ) {
   var html = letters.map( letter => {
-    var div = document.createElement( 'div' )
-    div.textContent = letter
-    return div
+    var element
+    if ( letter === 'br' ) {
+      element = document.createElement( 'br' )
+    } else {
+      element = document.createElement('div')
+      var span = document.createElement('span')
+      span.textContent = letter
+      element.appendChild(span)
+    }
+    return element
   } )
   return html
 }

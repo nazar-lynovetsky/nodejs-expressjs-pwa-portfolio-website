@@ -151,12 +151,191 @@
 /* 🎨 Scene
 =================================================================================== */
 
+/**
+* Container
+*/
+
 #scene {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#scene figcaption {
+/**
+* Figcaption
+*/
+
+#scene-name {
   position: absolute;
-  top: 60%;
-  left: 60%;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 900;
+}
+
+@media (min-width: 600px) {
+
+  #scene-name {
+    font-size: 3.8rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  #scene-name {
+    font-size: 4.8rem;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  #scene-name {
+    font-size: 4.6rem;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  #scene-name {
+    font-size: 5.9rem;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  #scene-name {
+    font-size: 8.6rem;
+  }
+
+}
+
+@media (min-width: 1900px) {
+
+  #scene-name {
+    font-size: 10rem;
+  }
+
+}
+
+/**
+* Letters
+*/
+
+#scene-name div {
+  display: inline-block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+}
+
+#scene-name div:nth-of-type(1) {
+  transform: translate(-34%, -30%) rotate(-31deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(2) {
+  transform: translate(2%, 23%) rotate(63deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(3) {
+  transform: translate(-23%, -26%) rotate(-16deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(4) {
+  transform: translate(22%, 15%) rotate(-35deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(5) {
+  transform: translate(95%, -34%) rotate(23deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(6) {
+  transform: translate(-25%, -75%) rotate(20deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(7) {
+  transform: translate(-40%, -13%) rotate(-10deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(8) {
+  transform: translate(-18%, -52%) rotate(35deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(9) {
+  transform: translate(-20%, -25%) rotate(-3deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(10) {
+  transform: translate(-13%, 15%) rotate(-10deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(11) {
+  transform: translate(-34%, -36%) rotate(-38deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(12) {
+  transform: translate(-41%, 28%) rotate(27deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(13) {
+  transform: translate(32%, -27%) rotate(54deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(14) {
+  transform: translate(45%, -35%) rotate(-3deg) scale(1.4);
+}
+
+#scene-name div:nth-of-type(15) {
+  transform: translate(-6%, -96%) rotate(-50deg) scale(1.4);
+}
+
+@media (min-width: 600px) {
+
+  #scene-name div {
+    margin-inline-start: 4px;
+    margin-inline-end: 4px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  #scene-name div {
+    margin-inline-start: 6px;
+    margin-inline-end: 6px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  #scene-name div {
+    margin-inline-start: 7px;
+    margin-inline-end: 7px;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  #scene-name div {
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+  }
+
+}
+
+@media (min-width: 1900px) {
+
+  #scene-name div {
+    margin-inline-start: 14px;
+    margin-inline-end: 14px;
+  }
+
 }
