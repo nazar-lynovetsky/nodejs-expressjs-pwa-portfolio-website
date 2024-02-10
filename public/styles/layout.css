@@ -81,26 +81,46 @@ body .mbs-p {
 }
 
 /**
+* Text font family
+*/
+
+body .ff-g {
+  font-family: var(--font-family-general);
+}
+
+body .ff-h {
+  font-family: var(--font-family-heading);
+}
+
+/**
 * Text font size
 */
 
-.fs-b {
+body .fs-b {
   font-size: 1.2rem;
 }
 
-.fs-s {
+body .fs-eb {
+  font-size: 1.33rem;
+}
+
+body .fs-s {
   font-size: .8rem;
+}
+
+body .fs-es {
+  font-size: .67rem;
 }
 
 /**
 * Text weight
 */
 
-.fw-400 {
+body .fw-400 {
   font-weight: 400;
 }
 
-.fw-500 {
+body .fw-500 {
   font-weight: 500;
 }
 
@@ -108,7 +128,7 @@ body .mbs-p {
 * Display
 */
 
-.d-f {
+body .d-f {
   display: flex;
 }
 
@@ -116,23 +136,23 @@ body .mbs-p {
 * Aligned
 */
 
-.ai-c {
+body .ai-c {
   align-items: center
 }
 
-.ai-fe {
+body .ai-fe {
   align-items: flex-end
 }
 
-.jc-c {
+body .jc-c {
   justify-content: center
 }
 
-.jc-fe {
+body .jc-fe {
   justify-content: flex-end
 }
 
-.fd-c {
+body .fd-c {
   flex-direction: column
 }
 
