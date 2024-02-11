@@ -223,8 +223,8 @@ scene.addEventListener('mousemove', e => {
       var distanceX = mouseX - figcaptionCenterX;
       var distanceY = mouseY - figcaptionCenterY;
   
-      var minShift = 1;
-      var maxShift = 4;
+      var minShift = 0;
+      var maxShift = 2;
   
       var shiftX = minShift + (maxShift - minShift) * (1 - Math.exp(-Math.abs(distanceX) / 100));
       var shiftY = minShift + (maxShift - minShift) * (1 - Math.exp(-Math.abs(distanceY) / 100));
@@ -232,11 +232,11 @@ scene.addEventListener('mousemove', e => {
       if (mouseX < figcaptionCenterX) shiftX *= -1;
       if (mouseY < figcaptionCenterY) shiftY *= -1;
   
-      const translation = `translate(${shiftX*2.5}%, ${shiftY}%)`;
+      const translation = `translate(${shiftX*3}%, ${shiftY}%)`;
   
       const anim = span.animate(
         { transform: translation },
-        { duration: 50000, easing: 'cubic-bezier(.21,.47,.52,.81)', fill: 'forwards' }
+        { duration: 10000, easing: 'cubic-bezier(.21,.47,.52,.81)', fill: 'forwards' }
       );
     } )
 
