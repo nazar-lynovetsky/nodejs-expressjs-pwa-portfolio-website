@@ -236,7 +236,7 @@ scene.addEventListener('mousemove', e => {
   
       const anim = span.animate(
         { transform: translation },
-        { duration: 100000, easing: 'cubic-bezier(.21,.47,.52,.81)', fill: 'forwards' }
+        { duration: 50000, easing: 'cubic-bezier(.21,.47,.52,.81)', fill: 'forwards' }
       );
     } )
 
