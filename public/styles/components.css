@@ -191,7 +191,7 @@
 
 #scene img {
   will-change: transform;
-  transform: translateZ(-100px);
+  transform: rotateZ(-2deg) translateZ(-100px);
   box-shadow: -20px 20px 25px -20px rgba(37, 36, 35, .4);
 }
 

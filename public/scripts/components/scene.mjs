@@ -236,6 +236,7 @@ function letterFadeIn(letterDivs,  letterFadeInConfig) {
 
 function letterMoveStart(evt, scene, letterSpans) {
   const sceneRect = scene.getBoundingClientRect()
+
   const mouseX = Math.round(evt.clientX - sceneRect.left)
   const mouseY = Math.round(evt.clientY - sceneRect.top)
 
@@ -290,14 +291,14 @@ function imageMoveStart(evt, scene, sceneImage) {
   const offsetyY = ((mouseY - centerY) / centerY) * 10
 
   sceneImage.animate(
-    {transform: `rotateX(${-1 * offsetyY}deg) rotateY(${offsetyX}deg) translateZ(-100px)`},
+    {transform: `rotateX(${-1 * offsetyY}deg) rotateY(${offsetyX}deg) rotateZ(-2deg) translateZ(-100px)`},
     {duration: 1000, easing: 'linear', fill: 'forwards'}
   )
 }
 
 function imageMoveStop(sceneImage) {
   sceneImage.animate(
-    {transform: 'rotateX(0deg) rotateY(0deg) translateZ(-100px)'},
+    {transform: 'rotateX(0deg) rotateY(0deg) rotateZ(-2deg) translateZ(-100px)'},
     {duration: 4000, easing: 'cubic-bezier(.21,.47,.52,.81)', fill: 'forwards'}
   )
 }
