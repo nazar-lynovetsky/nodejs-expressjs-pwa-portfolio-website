@@ -166,9 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
   letterFadeIn(letterDivs, letterFadeInConfig)
 
   const letterSpans = sceneName.querySelectorAll('span')
+  const sceneImage = scene.querySelector('img')
 
   scene.addEventListener('mousemove', evt => {
     letterMoveStart(evt, scene, letterSpans)
+    imageMoveStart(evt, scene, sceneImage)
   })
   scene.addEventListener('mouseleave', () => {
     letterMoveStop(letterSpans)
@@ -272,4 +274,22 @@ function letterMoveStop(letterSpans) {
       {duration: 4000, easing: 'cubic-bezier(.21,.47,.52,.81)', fill: 'forwards'}
     )
   })
+}
+
+function imageMoveStart(evt, scene, sceneImage) {
+  const sceneRect = scene.getBoundingClientRect()
+  
+  const mouseX = Math.round(evt.clientX - sceneRect.left)
+  const mouseY = Math.round(evt.clientY - sceneRect.top)
+
+  const centerX = sceneRect.width / 2
+  const centerY = sceneRect.height / 2
+
+  const offsetyX = ((mouseX - centerX) / centerX) * 10
+  const offsetyY = ((mouseY - centerY) / centerY) * 10
+
+  sceneImage.animate(
+    {transform: `rotateX(${-1 * offsetyY}deg) rotateY(${offsetyX}deg) translateZ(-100px)`},
+    {duration: 1000, easing: 'linear', fill: 'forwards'}
+  )
 }
