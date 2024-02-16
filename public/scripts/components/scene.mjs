@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
   scene.addEventListener('mouseleave', () => {
     letterMoveStop(letterSpans)
+    imageMoveStop(sceneImage)
   })
 
 })
@@ -291,5 +292,12 @@ function imageMoveStart(evt, scene, sceneImage) {
   sceneImage.animate(
     {transform: `rotateX(${-1 * offsetyY}deg) rotateY(${offsetyX}deg) translateZ(-100px)`},
     {duration: 1000, easing: 'linear', fill: 'forwards'}
+  )
+}
+
+function imageMoveStop(sceneImage) {
+  sceneImage.animate(
+    {transform: 'rotateX(0deg) rotateY(0deg) translateZ(-100px)'},
+    {duration: 4000, easing: 'cubic-bezier(.21,.47,.52,.81)', fill: 'forwards'}
   )
 }
