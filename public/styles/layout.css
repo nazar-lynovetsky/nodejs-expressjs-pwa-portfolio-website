@@ -498,15 +498,15 @@ main::after {
 * Items
 */
 
-.grid-introduction hgroup {
+.grid-intro hgroup {
   grid-area: hgroup;
 }
 
-.grid-introduction div {
+.grid-intro div {
   grid-area: main;
 }
 
-.grid-introduction figure {
+.grid-intro figure {
   grid-area: figure;
 }
 
@@ -514,7 +514,7 @@ main::after {
 * Container
 */
 
-.grid-introduction {
+.grid-intro {
   display: grid;
   grid-template-columns: 100%;
   grid-template-areas:
@@ -525,7 +525,7 @@ main::after {
 
 @media (min-width: 820px) {
 
-  .grid-introduction {
+  .grid-intro {
     grid-template-columns: 35% 65%;
     grid-template-areas:
     'hgroup figure'
@@ -536,7 +536,7 @@ main::after {
 
 @media (min-width: 1600px) {
 
-  .grid-introduction {
+  .grid-intro {
     grid-template-columns: 25% 75%;
   }
 
