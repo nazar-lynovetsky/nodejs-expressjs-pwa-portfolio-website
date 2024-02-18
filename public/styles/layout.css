@@ -176,6 +176,30 @@ body .dba::after {
   display: block;
 }
 
+@media (min-width: 600px) {
+
+  body .dbb-fmw::before {
+    display: block;
+  }
+
+  body .dba-fmw::after {
+    display: block;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 819px) {
+
+  body .dbb-fmw-tt::before {
+    display: block;
+  }
+
+  body .dba-fmw-tt::after {
+    display: block;
+  }
+
+}
+
 @media (min-width: 820px) {
 
   body .dbb-ft::before {
@@ -214,6 +238,47 @@ body .ib-is::before,
 body .ia-is::after {
   inset-inline-start: 0;
   inset-block-start: 0;
+}
+
+
+
+/* 🎨 Growing border
+=================================================================================== */
+
+/**
+* Genral
+*/
+
+.gb-v,
+.gb-h {
+  position: relative;
+}
+
+.gb-v::before,
+.gb-h::after {
+  content: '';
+  position: absolute;
+  display: none;
+  background-color: var(--color--tuatara);
+  animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
+}
+
+.gb-v::before {
+  inline-size: 2px;
+  block-size: calc(100% - 2px);
+}
+
+.gb-h::after {
+  inline-size: calc(100% + 2px);
+  block-size: 2px;
+}
+
+/**
+* Shifts
+*/
+
+.gb-v.gb-shift-ie::before {
+  inset-inline-end: -2px;
 }
 
 
@@ -466,48 +531,7 @@ main::after {
 
 
 
-/* 🎨 Growing border
-=================================================================================== */
-
-/**
-* Genral
-*/
-
-.gb-v,
-.gb-h {
-  position: relative;
-}
-
-.gb-v::before,
-.gb-h::after {
-  content: '';
-  position: absolute;
-  display: none;
-  background-color: var(--color--tuatara);
-  animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
-}
-
-.gb-v::before {
-  inline-size: 2px;
-  block-size: 100%;
-}
-
-.gb-h::after {
-  inline-size: 100%;
-  block-size: 2px;
-}
-
-/**
-* Shifts
-*/
-
-.gb-v.gb-shift-ie::before {
-  inset-inline-end: -2px;
-}
-
-
-
-/* 🎨 Grid Introduction
+/* 🎨 Grid Intro
 =================================================================================== */
 
 /**
@@ -554,6 +578,75 @@ main::after {
 
   .grid-intro {
     grid-template-columns: 25% 75%;
+  }
+
+}
+
+
+
+/* 🎨 Grid Latest
+=================================================================================== */
+
+/**
+* Items
+*/
+
+.grid-latest article:nth-of-type(1) {
+  grid-area: card-1;
+}
+
+.grid-latest article:nth-of-type(2) {
+  grid-area: card-2;
+}
+
+.grid-latest article:nth-of-type(3) {
+  grid-area: card-3;
+}
+
+.grid-latest footer {
+  grid-area: footer;
+}
+
+/**
+* Container
+*/
+
+.grid-latest {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  'card-1'
+  'card-2'
+  'card-3'
+  'footer';
+}
+
+@media (min-width: 600px) {
+
+  .grid-latest {
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'card-1 card-2'
+    'card-3 footer';
+  }
+
+}
+
+@media (min-width: 820px) {
+
+  .grid-latest {
+    grid-template-columns: 35% 35% 30%;
+    grid-template-areas:
+    'card-1 card-1 card-1'
+    'card-2 card-3 footer';
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .grid-latest {
+    grid-template-columns: 37.5% 37.5% 25%;
   }
 
 }
