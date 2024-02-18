@@ -380,7 +380,7 @@ main::after {
   display: block;
   inline-size: 2px;
   block-size: calc(100% - 24px);
-  background-color: #000;
+  background-color: var(--color--tuatara);
   animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
