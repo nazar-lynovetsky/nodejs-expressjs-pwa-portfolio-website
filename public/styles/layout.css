@@ -69,13 +69,21 @@ body :is(p, h1, h2, h3, h4, h5, h6) {
 */
 
 body .mbs-p {
-  margin-block-start: 10px;
+  margin-block-start: 6px;
+}
+
+@media (min-width: 600px) {
+
+  body .mbs-p {
+    margin-block-start: 10px;
+  }
+
 }
 
 @media (min-width: 1250px) {
 
   body .mbs-p {
-    margin-block-start: 12px;
+    margin-block-start: 16px;
   }
 
 }
@@ -489,6 +497,14 @@ main::after {
   block-size: 2px;
 }
 
+/**
+* Shifts
+*/
+
+.gb-v.gb-shift-ie::before {
+  inset-inline-end: -2px;
+}
+
 
 
 /* 🎨 Grid Introduction
@@ -555,14 +571,33 @@ main::after {
   padding: 12px;
 }
 
+.box-s {
+  padding-block: 6px;
+  padding-inline: 12px;
+}
+
 @media (min-width: 600px) {
+
   .box {
     padding: 24px;
   }
+
+  .box-s {
+    padding-block: 12px;
+    padding-inline: 24px;
+  }
+
 }
 
 @media (min-width: 1250px) {
+
   .box {
     padding: 36px;
   }
+
+  .box-s {
+    padding-block: 24px;
+    padding-inline: 36px;
+  }
+
 }

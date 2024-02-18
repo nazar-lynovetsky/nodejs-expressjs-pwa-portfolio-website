@@ -321,3 +321,67 @@
   }
 
 }
+
+
+
+/* 🎨 Header
+=================================================================================== */
+
+/**
+* General
+*/
+.header {
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  inline-size: 50%;
+  block-size: 100%;
+
+  --s: 4px; /* control the size */
+  --c: #0000 75%,var(--color--tuatara) 0;
+  --g1: conic-gradient(at 75% 25%,var(--c));
+  --g2: conic-gradient(at 25% 75%,var(--c));
+  background: 
+    var(--g1),var(--g1) var(--s) var(--s),
+    var(--g2),var(--g2) var(--s) var(--s) var(--color--white-rock);
+  background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+.header h1,
+.header h2,
+.header h3 {
+  inline-size: 50%;
+}
+
+@media (min-width: 820px) {
+
+  .header::before {
+    inline-size: 65%;
+  }
+
+  .header h1,
+  .header h2,
+  .header h3 {
+    inline-size: 35%;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .header::before {
+    inline-size: 75%;
+  }
+
+  .header h1,
+  .header h2,
+  .header h3 {
+    inline-size: 25%;
+  }
+
+}
