@@ -394,7 +394,7 @@
 =================================================================================== */
 
 /**
-* Grid Rules
+* General
 */
 
 .work-card {
@@ -420,7 +420,6 @@
 }
 
 .work-card footer {
-  position: relative;
   grid-area: footer;
   grid-row: 2 / 3;
   grid-column: 11 / 21;
@@ -438,9 +437,29 @@
   }
 
   .work-card--b footer {
+    position: relative;
     grid-column: 1 / 21;
     display: flex;
     justify-content: flex-end;
+  }
+
+  .work-card--b footer::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 70%;
+    block-size: 100%;
+
+    background:
+    radial-gradient(var(--color--tuatara) 3px, transparent 4px),
+    radial-gradient(var(--color--tuatara) 3px, transparent 4px),
+    linear-gradient(var(--color--white-rock) 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, var(--color--tuatara) 75px, var(--color--tuatara) 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, var(--color--tuatara) 76px, var(--color--tuatara) 77px, transparent 78px, transparent 109px),
+    var(--color--white-rock);
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
   }
 
   .work-card--b footer div {
@@ -457,6 +476,10 @@
 
   .work-card--b ul {
     grid-column: 1/6;
+  }
+
+  .work-card--b footer::before {
+    inline-size: 75%;
   }
 
   .work-card--b footer div {

@@ -270,6 +270,7 @@ body .ia-is::after {
 .gb-h::after {
   content: '';
   position: absolute;
+  z-index: 10;
   display: none;
   background-color: var(--color--tuatara);
   animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
@@ -615,8 +616,37 @@ main::after {
   grid-area: card-3;
 }
 
-.grid-latest footer {
+.grid-latest > footer {
   grid-area: footer;
+}
+
+.grid-latest > footer div {
+  position: relative;
+  height: 100%;
+}
+
+.grid-latest > footer div::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+
+  --s: 110px; /* control the size */
+  --_g: #0000 52%,var(--color--tuatara) /* first color */ 54% 57%,#0000 59%; 
+  background: 
+   radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
+   radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
+   radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
+   radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
+   var(--color--white-rock); /* second color */
+  background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+}
+
+.grid-latest > footer a {
+  position: relative;
+  z-index: 10;
 }
 
 /**
