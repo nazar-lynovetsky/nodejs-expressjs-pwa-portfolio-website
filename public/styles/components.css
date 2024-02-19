@@ -14,6 +14,7 @@
   border: 2px solid var(--color--tuatara);
   border-radius: 24px;
   background-color: var(--color--tuatara);
+  font-weight: 500;
   line-height: 1.1;
   text-align: center;
   text-decoration: none;
@@ -382,6 +383,83 @@
   .header h1,
   .header h2,
   .header h3 {
+    inline-size: 25%;
+  }
+
+}
+
+
+
+/* 🎨 Work Card
+=================================================================================== */
+
+/**
+* Grid Rules
+*/
+
+.work-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-areas:
+  'header header'
+  'list footer';
+}
+
+.work-card header {
+  grid-area: header;
+  grid-row: 1 / 2;
+  grid-column: 1 / 21;
+  padding-block: 60px;
+}
+
+.work-card ul {
+  grid-area: list;
+  grid-row: 2 / 3;
+  grid-column: 1 / 11;
+}
+
+.work-card footer {
+  position: relative;
+  grid-area: footer;
+  grid-row: 2 / 3;
+  grid-column: 11 / 21;
+}
+
+@media (min-width: 820px) {
+
+  .work-card--b header {
+    grid-column: 8/21;
+  }
+
+  .work-card--b ul {
+    grid-column: 1/8;
+    grid-row: 1/2;
+  }
+
+  .work-card--b footer {
+    grid-column: 1 / 21;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .work-card--b footer div {
+    inline-size: 30%;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .work-card--b header {
+    grid-column: 6/21;
+  }
+
+  .work-card--b ul {
+    grid-column: 1/6;
+  }
+
+  .work-card--b footer div {
     inline-size: 25%;
   }
 

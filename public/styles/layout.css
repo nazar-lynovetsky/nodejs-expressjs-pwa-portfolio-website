@@ -105,19 +105,19 @@ body .ff-h {
 */
 
 body .fs-b {
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 body .fs-eb {
-  font-size: 1.33rem;
+  font-size: 1.33em;
 }
 
 body .fs-s {
-  font-size: .8rem;
+  font-size: .8em;
 }
 
 body .fs-es {
-  font-size: .67rem;
+  font-size: .67em;
 }
 
 /**
@@ -190,11 +190,23 @@ body .dba::after {
 
 @media (min-width: 600px) and (max-width: 819px) {
 
-  body .dbb-fmw-tt::before {
+  body .dbb-fmw-bt::before {
     display: block;
   }
 
-  body .dba-fmw-tt::after {
+  body .dba-fmw-bt::after {
+    display: block;
+  }
+
+}
+
+@media (max-width: 819px) {
+
+  body .dbb-bt::before {
+    display: block;
+  }
+
+  body .dba-bt::after {
     display: block;
   }
 
@@ -265,11 +277,11 @@ body .ia-is::after {
 
 .gb-v::before {
   inline-size: 2px;
-  block-size: calc(100% - 2px);
+  block-size: 100%;
 }
 
 .gb-h::after {
-  inline-size: calc(100% + 2px);
+  inline-size: 100%;
   block-size: 2px;
 }
 
