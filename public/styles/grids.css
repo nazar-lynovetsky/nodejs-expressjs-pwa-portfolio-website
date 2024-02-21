@@ -1,0 +1,159 @@
+/* 🎨 Grid Intro ✅✅✅
+=================================================================================== */
+
+/**
+* Items
+*/
+
+.grid-intro hgroup {
+  grid-area: hgroup;
+}
+
+.grid-intro div {
+  grid-area: main;
+}
+
+.grid-intro figure {
+  grid-area: figure;
+}
+
+@media (min-width: 820px) {
+
+  .grid-intro div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+}
+
+/**
+* Container
+*/
+
+.grid-intro {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  'hgroup'
+  'figure'
+  'main';
+}
+
+@media (min-width: 820px) {
+
+  .grid-intro {
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+    'hgroup figure'
+    'main figure';
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .grid-intro {
+    grid-template-columns: 25% 75%;
+  }
+
+}
+
+
+
+/* 🎨 Grid Latest
+=================================================================================== */
+
+/**
+* Items
+*/
+
+.grid-latest article:nth-of-type(1) {
+  grid-area: card-1;
+}
+
+.grid-latest article:nth-of-type(2) {
+  grid-area: card-2;
+}
+
+.grid-latest article:nth-of-type(3) {
+  grid-area: card-3;
+}
+
+.grid-latest > footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+
+  .grid-latest > footer {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+}
+
+/**
+* Inner Elements
+*/
+
+.grid-latest > footer::after {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.grid-latest > footer a {
+  position: relative;
+  z-index: 10;
+}
+
+/**
+* Container
+*/
+
+.grid-latest {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  'card-1'
+  'card-2'
+  'card-3'
+  'footer';
+}
+
+@media (min-width: 600px) {
+
+  .grid-latest {
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'card-1 card-2'
+    'card-3 footer';
+  }
+
+}
+
+@media (min-width: 820px) {
+
+  .grid-latest {
+    grid-template-columns: 35% 35% 30%;
+    grid-template-areas:
+    'card-1 card-1 card-1'
+    'card-2 card-3 footer';
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .grid-latest {
+    grid-template-columns: 37.5% 37.5% 25%;
+  }
+
+}

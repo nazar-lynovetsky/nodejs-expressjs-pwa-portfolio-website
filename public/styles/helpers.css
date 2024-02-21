@@ -1,0 +1,210 @@
+/* 🎨 Helpers
+=================================================================================== */
+
+/**
+* Text margin
+*/
+
+body .mbs-p {
+  margin-block-start: 6px;
+}
+
+@media (min-width: 600px) {
+
+  body .mbs-p {
+    margin-block-start: 10px;
+  }
+
+}
+
+@media (min-width: 1250px) {
+
+  body .mbs-p {
+    margin-block-start: 16px;
+  }
+
+}
+
+/**
+* Text font family
+*/
+
+body .ff-g {
+  font-family: var(--font-family-general);
+}
+
+body .ff-h {
+  font-family: var(--font-family-heading);
+}
+
+/**
+* Text font size
+*/
+
+body .fs-b {
+  font-size: 1.2em;
+}
+
+body .fs-eb {
+  font-size: 1.33em;
+}
+
+body .fs-s {
+  font-size: .8em;
+}
+
+body .fs-es {
+  font-size: .67em;
+}
+
+/**
+* Text weight
+*/
+
+body .fw-400 {
+  font-weight: 400;
+}
+
+body .fw-500 {
+  font-weight: 500;
+}
+
+/**
+* Display
+*/
+
+body .d-f {
+  display: flex;
+}
+
+/**
+* Aligned
+*/
+
+body .ai-c {
+  align-items: center
+}
+
+body .ai-fe {
+  align-items: flex-end
+}
+
+body .jc-c {
+  justify-content: center
+}
+
+body .jc-fe {
+  justify-content: flex-end
+}
+
+body .fd-c {
+  flex-direction: column
+}
+
+/**
+* Z-Index
+*/
+
+.zi-10 {
+  z-index: 10;
+}
+
+/**
+* Pseudo-elements display
+*/
+
+body .dbb::before {
+  display: block;
+}
+
+body .dba::after {
+  display: block;
+}
+
+@media (max-width: 599px) {
+
+  body .dbb-bmw::before {
+    display: block;
+  }
+
+  body .dba-bmw::after {
+    display: block;
+  }
+
+}
+
+@media (min-width: 600px) {
+
+  body .dbb-fmw::before {
+    display: block;
+  }
+
+  body .dba-fmw::after {
+    display: block;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 819px) {
+
+  body .dbb-fmw-bt::before {
+    display: block;
+  }
+
+  body .dba-fmw-bt::after {
+    display: block;
+  }
+
+}
+
+@media (max-width: 819px) {
+
+  body .dbb-bt::before {
+    display: block;
+  }
+
+  body .dba-bt::after {
+    display: block;
+  }
+
+}
+
+@media (min-width: 820px) {
+
+  body .dbb-ft::before {
+    display: block;
+  }
+
+  body .dba-ft::after {
+    display: block;
+  }
+
+}
+
+/**
+* Pseudo-elements position
+*/
+
+body .ib-bs::before,
+body .ia-bs::after {
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}
+
+body .ib-ie::before,
+body .ia-ie::after {
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+body .ib-be::before,
+body .ia-be::after {
+  inset-inline-start: 0;
+  inset-block-end: 0;
+}
+
+body .ib-is::before,
+body .ia-is::after {
+  inset-inline-start: 0;
+  inset-block-start: 0;
+}

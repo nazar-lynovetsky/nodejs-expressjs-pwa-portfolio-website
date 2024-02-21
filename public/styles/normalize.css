@@ -347,3 +347,66 @@ template {
 [hidden] {
   display: none;
 }
+
+
+
+/* 🎨 Resets
+=================================================================================== */
+
+/**
+* Sets the box sizing for all elements
+*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/**
+* Resets button styles
+*/
+
+button {
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+/**
+* Resets list styles
+*/
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+* Resets img styles
+*/
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/**
+* Resets figure styles
+*/
+
+figure {
+  margin: 0;
+}
+
+/**
+* Resets text margin
+*/
+
+body :is(p, h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+}

@@ -1,302 +1,4 @@
-/* 🎨 Resets
-=================================================================================== */
-
-/**
-* Sets the box sizing for all elements
-*/
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-/**
-* Resets button styles
-*/
-
-button {
-  padding: 0;
-  box-shadow: none;
-  cursor: pointer;
-}
-
-button:focus,
-button:focus-visible {
-  outline: none;
-}
-
-/**
-* Resets list styles
-*/
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/**
-* Resets img styles
-*/
-
-img {
-  display: block;
-  max-inline-size: 100%;
-}
-
-/**
-* Resets figure styles
-*/
-
-figure {
-  margin: 0;
-}
-
-/**
-* Resets text margin
-*/
-
-body :is(p, h1, h2, h3, h4, h5, h6) {
-  margin: 0;
-}
-
-
-
-/* 🎨 Helpers
-=================================================================================== */
-
-/**
-* Text margin
-*/
-
-body .mbs-p {
-  margin-block-start: 6px;
-}
-
-@media (min-width: 600px) {
-
-  body .mbs-p {
-    margin-block-start: 10px;
-  }
-
-}
-
-@media (min-width: 1250px) {
-
-  body .mbs-p {
-    margin-block-start: 16px;
-  }
-
-}
-
-/**
-* Text font family
-*/
-
-body .ff-g {
-  font-family: var(--font-family-general);
-}
-
-body .ff-h {
-  font-family: var(--font-family-heading);
-}
-
-/**
-* Text font size
-*/
-
-body .fs-b {
-  font-size: 1.2em;
-}
-
-body .fs-eb {
-  font-size: 1.33em;
-}
-
-body .fs-s {
-  font-size: .8em;
-}
-
-body .fs-es {
-  font-size: .67em;
-}
-
-/**
-* Text weight
-*/
-
-body .fw-400 {
-  font-weight: 400;
-}
-
-body .fw-500 {
-  font-weight: 500;
-}
-
-/**
-* Display
-*/
-
-body .d-f {
-  display: flex;
-}
-
-/**
-* Aligned
-*/
-
-body .ai-c {
-  align-items: center
-}
-
-body .ai-fe {
-  align-items: flex-end
-}
-
-body .jc-c {
-  justify-content: center
-}
-
-body .jc-fe {
-  justify-content: flex-end
-}
-
-body .fd-c {
-  flex-direction: column
-}
-
-/**
-* Pseudo-elements display
-*/
-
-body .dbb::before {
-  display: block;
-}
-
-body .dba::after {
-  display: block;
-}
-
-@media (min-width: 600px) {
-
-  body .dbb-fmw::before {
-    display: block;
-  }
-
-  body .dba-fmw::after {
-    display: block;
-  }
-
-}
-
-@media (min-width: 600px) and (max-width: 819px) {
-
-  body .dbb-fmw-bt::before {
-    display: block;
-  }
-
-  body .dba-fmw-bt::after {
-    display: block;
-  }
-
-}
-
-@media (max-width: 819px) {
-
-  body .dbb-bt::before {
-    display: block;
-  }
-
-  body .dba-bt::after {
-    display: block;
-  }
-
-}
-
-@media (min-width: 820px) {
-
-  body .dbb-ft::before {
-    display: block;
-  }
-
-  body .dba-ft::after {
-    display: block;
-  }
-
-}
-
-/**
-* Pseudo-elements position
-*/
-
-body .ib-bs::before,
-body .ia-bs::after {
-  inset-inline-start: 0;
-  inset-block-start: 0;
-}
-
-body .ib-ie::before,
-body .ia-ie::after {
-  inset-inline-end: 0;
-  inset-block-start: 0;
-}
-
-body .ib-be::before,
-body .ia-be::after {
-  inset-inline-start: 0;
-  inset-block-end: 0;
-}
-
-body .ib-is::before,
-body .ia-is::after {
-  inset-inline-start: 0;
-  inset-block-start: 0;
-}
-
-
-
-/* 🎨 Growing border
-=================================================================================== */
-
-/**
-* Genral
-*/
-
-.gb-v,
-.gb-h {
-  position: relative;
-}
-
-.gb-v::before,
-.gb-h::after {
-  content: '';
-  position: absolute;
-  z-index: 10;
-  display: none;
-  background-color: var(--color--tuatara);
-  animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
-}
-
-.gb-v::before {
-  inline-size: 2px;
-  block-size: 100%;
-}
-
-.gb-h::after {
-  inline-size: 100%;
-  block-size: 2px;
-}
-
-/**
-* Shifts
-*/
-
-.gb-v.gb-shift-ie::before {
-  inset-inline-end: -2px;
-}
-
-
-
-/* 🎨 Body
+/* 🎨 Body ✅✅✅
 =================================================================================== */
 
 /**
@@ -310,16 +12,7 @@ body {
 
 
 
-/* 🎨 Scrollbar
-=================================================================================== */
-
-/**
-* General
-*/
-
-
-
-/* 🎨 Page frame
+/* 🎨 Page frame ✅✅✅
 =================================================================================== */
 
 /**
@@ -334,7 +27,7 @@ body::before,
 body::after {
   content: '';
   position: fixed;
-  z-index: 10;
+  z-index: 40;
   inset-block-start: 12px;
   display: block;
   inline-size: 12px;
@@ -354,7 +47,7 @@ html::before,
 html::after {
   content: '';
   position: fixed;
-  z-index: 10;
+  z-index: 40;
   inset-inline-start: 12px;
   display: block;
   inline-size: calc(100% - 24px);
@@ -416,7 +109,7 @@ html::after {
 
 
 
-/* 🎨 Page border
+/* 🎨 Page border ✅✅✅
 =================================================================================== */
 
 /**
@@ -440,7 +133,7 @@ html::after {
 .banner::after {
   content: '';
   position: fixed;
-  z-index: 10;
+  z-index: 40;
   inset-inline-start: 12px;
   display: block;
   inline-size: calc(100% - 24px);
@@ -461,7 +154,7 @@ main::before,
 main::after {
   content: '';
   position: fixed;
-  z-index: 10;
+  z-index: 40;
   inset-block-start: 12px;
   display: block;
   inline-size: 2px;
@@ -544,158 +237,49 @@ main::after {
 
 
 
-/* 🎨 Grid Intro
+/* 🎨 Growing border ✅✅✅
 =================================================================================== */
 
 /**
-* Items
+* Genral
 */
 
-.grid-intro hgroup {
-  grid-area: hgroup;
-}
-
-.grid-intro div {
-  grid-area: main;
-}
-
-.grid-intro figure {
-  grid-area: figure;
-}
-
-/**
-* Container
-*/
-
-.grid-intro {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-areas:
-  'hgroup'
-  'figure'
-  'main';
-}
-
-@media (min-width: 820px) {
-
-  .grid-intro {
-    grid-template-columns: 35% 65%;
-    grid-template-areas:
-    'hgroup figure'
-    'main figure';
-  }
-
-}
-
-@media (min-width: 1600px) {
-
-  .grid-intro {
-    grid-template-columns: 25% 75%;
-  }
-
-}
-
-
-
-/* 🎨 Grid Latest
-=================================================================================== */
-
-/**
-* Items
-*/
-
-.grid-latest article:nth-of-type(1) {
-  grid-area: card-1;
-}
-
-.grid-latest article:nth-of-type(2) {
-  grid-area: card-2;
-}
-
-.grid-latest article:nth-of-type(3) {
-  grid-area: card-3;
-}
-
-.grid-latest > footer {
-  grid-area: footer;
-}
-
-.grid-latest > footer div {
+.gb-v,
+.gb-h {
   position: relative;
-  height: 100%;
 }
 
-.grid-latest > footer div::before {
+.gb-v::before,
+.gb-h::after {
   content: '';
   position: absolute;
-  inset-inline-start: 0;
-  inset-block-start: 0;
-  inline-size: 100%;
-  block-size: 100%;
-
-  --s: 110px; /* control the size */
-  --_g: #0000 52%,var(--color--tuatara) /* first color */ 54% 57%,#0000 59%; 
-  background: 
-   radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
-   radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
-   radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
-   radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
-   var(--color--white-rock); /* second color */
-  background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+  z-index: 30;
+  display: none;
+  background-color: var(--color--tuatara);
+  animation: scale-in 0.8s 0.6s both cubic-bezier(.17,.67,.83,.67);
 }
 
-.grid-latest > footer a {
-  position: relative;
-  z-index: 10;
+.gb-v::before {
+  inline-size: 2px;
+  block-size: 100%;
+}
+
+.gb-h::after {
+  inline-size: 100%;
+  block-size: 2px;
 }
 
 /**
-* Container
+* Shifts
 */
 
-.grid-latest {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-areas:
-  'card-1'
-  'card-2'
-  'card-3'
-  'footer';
-}
-
-@media (min-width: 600px) {
-
-  .grid-latest {
-    grid-template-columns: 50% 50%;
-    grid-template-areas:
-    'card-1 card-2'
-    'card-3 footer';
-  }
-
-}
-
-@media (min-width: 820px) {
-
-  .grid-latest {
-    grid-template-columns: 35% 35% 30%;
-    grid-template-areas:
-    'card-1 card-1 card-1'
-    'card-2 card-3 footer';
-  }
-
-}
-
-@media (min-width: 1600px) {
-
-  .grid-latest {
-    grid-template-columns: 37.5% 37.5% 25%;
-  }
-
+.gb-v.gb-shift-ie::before {
+  inset-inline-end: -2px;
 }
 
 
 
-/* 🎨 Box
+/* 🎨 Box ✅✅✅
 =================================================================================== */
 
 /**
@@ -706,7 +290,7 @@ main::after {
   padding: 12px;
 }
 
-.box-s {
+.box-small {
   padding-block: 6px;
   padding-inline: 12px;
 }
@@ -717,7 +301,7 @@ main::after {
     padding: 24px;
   }
 
-  .box-s {
+  .box-small {
     padding-block: 12px;
     padding-inline: 24px;
   }
@@ -730,7 +314,7 @@ main::after {
     padding: 36px;
   }
 
-  .box-s {
+  .box-small {
     padding-block: 24px;
     padding-inline: 36px;
   }
