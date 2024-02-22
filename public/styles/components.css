@@ -166,6 +166,7 @@
   overflow: hidden;
   transform-style: preserve-3d;
   transform: perspective(5000px);
+  aspect-ratio: 4 / 3;
 }
 
 @media (min-width: 600px) {
@@ -173,6 +174,14 @@
   #scene {
     padding-block-start: 36px;
     padding-block-end: 36px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  #scene {
+    aspect-ratio: 16 / 9;
   }
 
 }
@@ -204,6 +213,7 @@
   position: absolute;
   inset-block-start: 50%;
   inset-inline-start: 0;
+  display: none;
   inline-size: 100%;
   transform: translateY(-50%) translateZ(100px);
   font-family: var(--font-family-heading);
